@@ -11,7 +11,7 @@
 [ZQM Computing](https://github.com/ZQM-Computing) is the geospatial engineering arm of ZQM Labs. They build the patterns, data infrastructure, and tooling that ground our games in real-world locations:
 
 - **[geospatial-patterns](https://github.com/ZQM-Computing/geospatial-patterns)** — umbrella index of all 14+ geospatial repos
-- ****zqm-labs** (private)** — games monorepo (player PWA, PocketBase, Hugo site)
+- **zqm-labs** (private) — games monorepo (player PWA, PocketBase, Hugo site)
 - **[postgis-patterns](https://github.com/ZQM-Computing/postgis-patterns)** — production PostGIS patterns
 - **[geopandas-patterns](https://github.com/ZQM-Computing/geopandas-patterns)** — GeoPandas patterns for game design
 - **[h3-patterns](https://github.com/ZQM-Computing/h3-patterns)** — H3 hexagonal grid for location binning
