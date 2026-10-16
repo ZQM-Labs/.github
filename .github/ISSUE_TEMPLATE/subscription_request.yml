@@ -1,0 +1,59 @@
+name: Subscription / Retainer Request
+description: Request a ZQM Computing subscription, retainer, or ongoing automation engagement.
+title: "subscription: <SKU>"
+labels: ["subscription", "purchase"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for retainer or subscription engagements:
+        Fleet Health Monitoring, EDR/NDR Review, Endpoint Attestation Maintenance, Custom Automation.
+  - type: input
+    id: sku
+    attributes:
+      label: SKU
+      description: Exact SKU from SKU_CATALOG.md
+      placeholder: "SUB-HEALTH-2026"
+    validations:
+      required: true
+  - type: input
+    id: org
+    attributes:
+      label: Organization / MSQ
+      placeholder: "Acme MSSP"
+    validations:
+      required: true
+  - type: input
+    id: email
+    attributes:
+      label: Contact email
+      description: Where to send the subscription onboarding package
+      placeholder: "ops@acme.example"
+    validations:
+      required: true
+  - type: dropdown
+    id: cadence
+    attributes:
+      label: Cadence
+      options:
+        - Monthly
+        - Quarterly
+        - Annual
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Scope note
+      description: Endpoint count, environments, current tooling
+      placeholder: "120 endpoints, Defender + CrowdStrike, want Fleet health rollup monthly"
+    validations:
+      required: true
+  - type: input
+    id: txid
+    attributes:
+      label: Transaction ID
+      description: Payment reference / crypto txid
+      placeholder: blockchain txid
+    validations:
+      required: true
