@@ -1,0 +1,11 @@
+# ZQM-Labs Code Owners
+# Default owners for all files
+* @ZQM-Computing
+
+# Infrastructure and CI/CD
+/.github/ @ZQM-Computing
+
+# Quest content and game design
+/quest-packs/ @ZQM-Computing
+/quest-authoring/ @ZQM-Computing
+/lantern-player/ @ZQM-Computing
