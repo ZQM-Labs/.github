@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/zqm-labs-banner.svg" alt="ZQM Labs — Z's Quests & Mischief: community games, geospatial, and open tools" width="100%" />
+</p>
+
 # ZQM Labs — Z's Quests & Mischief
 
 <p align="center">
