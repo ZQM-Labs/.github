@@ -5,72 +5,55 @@
 # ZQM Labs — Z's Quests & Mischief
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Games-Location%20Hunts-e07b24" alt="Games" />
-  <img src="https://img.shields.io/badge/Geospatial-PostGIS%20H3%20STAC-blue" alt="Geospatial" />
-  <img src="https://img.shields.io/badge/Open%20Source-MIT-green" alt="Open Source" />
-</p>
-
-<p align="center">
   <strong>Games, gear & a little mischief.</strong><br>
-  Location-based scavenger-hunt games for neighborhoods, schools, churches, scout troops, and office parties — now in 8 languages across 6 continents.
+  Location-based games, community play, and open tools grounded in geospatial engineering.
 </p>
 
 <p align="center">
-  <a href="https://zqmlabs.com">🌐 zqmlabs.com</a> •
-  <a href="https://zqmlabs.com/games/hunt-for-wisps/">🎮 Play Demo</a> •
-  <a href="https://github.com/ZQM-Labs/quest-packs">📦 Quest Packs</a> •
-  <a href="https://github.com/ZQM-Labs/quest-authoring">✍️ Author Your Own</a>
+  <a href="https://zqmlabs.com">zqmlabs.com</a> •
+  <a href="https://zqmlabs.com/games/hunt-for-wisps/">Wisp's Lost Lanterns demo</a> •
+  <a href="https://github.com/ZQM-Labs/quest-packs">Quest packs</a> •
+  <a href="https://github.com/ZQM-Labs/quest-authoring">Quest authoring</a>
 </p>
 
 ---
 
-## 🎮 What We Build
+## What We Build
 
 ### Wisp's Lost Lanterns
+A self-guided QR scavenger-hunt game. The player repository currently contains locale files for English, Spanish, French, German, and Portuguese; the language selector is experimental and full translation coverage has not been established. See the [player's language-support notes](https://github.com/ZQM-Labs/lantern-player#language-support) before making localization claims.
 
-Our flagship game — a self-guided QR scavenger hunt with 6 stops, 4 scare levels, and a global leaderboard.
+- **Player PWA** — installable web app with offline-oriented behavior; validate the exact supported flows against the current release.
+- **Quest packs** — game content and printable materials.
+- **Authoring tools** — workflows for creating and validating quests.
 
-- **Player PWA** — offline-first, GPS-enabled, QR-code unlocks, 8 languages
-- **Quest Packs** — ready-to-play kits with printable signs, setup guides, and FAQs
-- **Authoring Tools** — create your own quests with our validator and guide
+### Open geospatial patterns
+Reusable examples and references for PostGIS, H3, STAC, GDAL, GeoPandas, DuckDB, cloud-optimized rasters, mapping, routing, and related tooling. Check each repository's README and tests for its current maturity; “pattern” does not by itself imply production validation.
 
-### Open-Source Geospatial Patterns
+## Project map
 
-14+ repos of production-tested geospatial patterns — PostGIS, H3, STAC, GDAL, GeoPandas, DuckDB, COG, and more.
-
-## 🌍 Global Reach
-
-| Feature | Status |
+| Area | Start here |
 |---|---|
-| Languages | EN, ES, FR, DE, PT, ZH, JA, AR |
-| Story Modes | Halloween, Lantern Festival, Summer Solstice, Spring Equinox, Diwali, Mid-Autumn |
-| Cultural Adaptations | East Asian, South Asian, Western, Latin American, Middle Eastern, African |
-| Global Leaderboard | Cross-kit rankings with country flags |
-| Community Discovery | Find games near you |
+| Public website | [zqmlabs-site](https://github.com/ZQM-Labs/zqmlabs-site) |
+| Player app | [lantern-player](https://github.com/ZQM-Labs/lantern-player) |
+| Quest packs | [quest-packs](https://github.com/ZQM-Labs/quest-packs) |
+| Quest authoring | [quest-authoring](https://github.com/ZQM-Labs/quest-authoring) |
+| Organizer materials | [organizer-toolkit](https://github.com/ZQM-Labs/organizer-toolkit) |
+| Playtesting | [playtests](https://github.com/ZQM-Labs/playtests) |
+| Geospatial pattern index | [geospatial-patterns](https://github.com/ZQM-Computing/geospatial-patterns) |
 
-## 📚 Key Repos
+## How the organizations connect
 
-| Repo | Description |
-|---|---|
-| [lantern-player](https://github.com/ZQM-Labs/lantern-player) | Wisp's Lost Lanterns player — offline-first PWA |
-| [zqmlabs-site](https://github.com/ZQM-Labs/zqmlabs-site) | Public website (Hugo) |
-| [quest-packs](https://github.com/ZQM-Labs/quest-packs) | Ready-to-play quest packs |
-| [quest-authoring](https://github.com/ZQM-Labs/quest-authoring) | Create your own quests |
-| [organizer-toolkit](https://github.com/ZQM-Labs/organizer-toolkit) | Setup guides and FAQs |
-| [playtests](https://github.com/ZQM-Labs/playtests) | Playtest protocols and results |
-| [geospatial-patterns](https://github.com/ZQM-Computing/geospatial-patterns) | Umbrella index of all 14+ geospatial repos |
+**ZQM Labs** brings together games, community experiences, and open tools. **ZQM Computing** focuses on geospatial engineering and scientific-computing patterns that can support location-aware experiences. The projects are related, but their maturity, deployment status, and support commitments should be assessed per repository.
 
-## 🏗️ ZQM Computing — the geospatial arm
+## Licensing
 
-[ZQM Computing](https://github.com/ZQM-Computing) is the geospatial engineering arm of ZQM Labs. They build the patterns, data infrastructure, and tooling that ground our games in real-world locations.
-
-## 📜 License
-
-All repos are MIT-licensed unless otherwise noted. Game content (quests, stories, characters) is CC-BY-4.0.
+Check the license file in each repository before reusing code, artwork, stories, or other content. Do not assume that every repository shares the same license.
 
 ---
 
 <p align="center">
   <em>Play more. Plan less.</em><br>
-  <a href="https://zqmlabs.com">zqmlabs.com</a>
+  <a href="https://zqmlabs.com">zqmlabs.com</a> •
+  <a href="https://github.com/ZQM-Computing">ZQM Computing</a>
 </p>
