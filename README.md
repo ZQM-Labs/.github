@@ -28,3 +28,15 @@ Brand and project work live in the org's repositories; this repo is the front do
   <a href="https://github.com/ZQM-Computing">ZQM Computing</a>
 </p>
 <!-- ZQM-FOOTER-END -->
+
+## Installation
+
+```bash
+pip install -e .
+```
+
+Requires Python 3.11+.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
