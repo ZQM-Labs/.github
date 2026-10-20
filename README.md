@@ -38,6 +38,13 @@ pip install -e .
 
 Requires Python 3.11+.
 
+## Usage
+
+The community-health files in this repository act as organization-wide
+defaults: repositories in the ZQM-Labs org that don't carry their own
+contributing guide, code of conduct, or issue/PR templates inherit these.
+The org profile itself lives in `profile/README.md`.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
