@@ -17,6 +17,22 @@ Organization profile and community health files for the ZQM-Labs org.
 
 Brand and project work live in the org's repositories; this repo is the front door.
 
+## Repository role and status
+
+**Status:** Active, public. Documented verdict (2026-10-19 estate audit): **KEEP**.
+
+**What this repository is:** The org-level presence repository for ZQM-Labs. Its `profile/README.md` is what GitHub renders on the organization's public profile page — the front door for the game lab — and the community-health files here apply as org-wide defaults.
+
+**What it contributes:**
+
+- The ZQM-Labs org profile page itself: who the lab is, the Dr. Z / Wisp story, the live Halloween pilot, and the map of the games repositories (player, quest packs, authoring, organizer toolkit, playtests, tracker, site).
+- The public statement of the two-account boundary: ZQM-Labs is the game lab; ZQM-Computing is general computing.
+- Org-wide community defaults for every ZQM-Labs repository that does not supply its own.
+
+**Why it is not a deletion candidate:** Deleting it removes the org's public profile page and its community-health defaults. It is a brand surface, not scaffolding.
+
+**Placement:** ZQM-Labs (org profile).
+
 <!-- ZQM-FOOTER-START -->
 <!-- markdownlint-disable MD033 -->
 ---
