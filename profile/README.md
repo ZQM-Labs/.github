@@ -21,7 +21,7 @@ Every game ships with the **scare Dial** — four intensity levels, from *Li'l Z
 
 ## What We Build
 
-- **Games** — [lantern-player](https://github.com/ZQM-Labs/lantern-player): the offline-first player app (vanilla JS, Leaflet, PWA)
+- **Games** — [quest-player](https://github.com/ZQM-Labs/quest-player): the offline-first player app (vanilla JS, Leaflet, PWA)
 - **Quest packs** — [quest-packs](https://github.com/ZQM-Labs/quest-packs): the edition catalog, incl. a free 6-stop sample quest
 - **Authoring** — [quest-authoring](https://github.com/ZQM-Labs/quest-authoring): quest-pack JSON spec, authoring guide, validator
 - **Organizer toolkit** — [organizer-toolkit](https://github.com/ZQM-Labs/organizer-toolkit): setup checklists, print specs, day-of troubleshooting
