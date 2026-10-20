@@ -29,13 +29,7 @@ Brand and project work live in the org's repositories; this repo is the front do
 </p>
 <!-- ZQM-FOOTER-END -->
 
-## Installation
-
-```bash
-pip install -e .
-```
-
-Requires Python 3.11+.
+Organization defaults — no installation.
 
 ## License
 
