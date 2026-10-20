@@ -1,10 +1,12 @@
 # ZQM Labs — Z's Quests & Mischief
 
 <!-- ZQM-START -->
+<!-- markdownlint-disable MD033 -->
 <p align="center">
   <strong>ZQM Labs — Z's Quests & Mischief</strong><br>
   <a href="https://zqmlabs.com">zqmlabs.com</a>
 </p>
+<!-- markdownlint-enable MD033 -->
 <!-- ZQM-END -->
 
 **ZQM Labs is a game lab.** We build location-based quest games — real places, real teams, real mischief.
@@ -24,7 +26,7 @@ Every game ships with the **scare Dial** — four intensity levels, from *Li'l Z
 - **Authoring** — [quest-authoring](https://github.com/ZQM-Labs/quest-authoring): quest-pack JSON spec, authoring guide, validator
 - **Organizer toolkit** — [organizer-toolkit](https://github.com/ZQM-Labs/organizer-toolkit): setup checklists, print specs, day-of troubleshooting
 - **Playtests** — [playtests](https://github.com/ZQM-Labs/playtests): protocol + results from real runs
-- **Analytics** — [zqm-analytics](https://github.com/ZQM-Labs/zqm-analytics): team analytics + tracking backend
+- **Tracking** — [wisps-tracker](https://github.com/ZQM-Labs/wisps-tracker): team tracking backend
 - **Site** — [zqmlabs-site](https://github.com/ZQM-Labs/zqmlabs-site): zqmlabs.com source
 
 ## Organizations
