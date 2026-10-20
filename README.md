@@ -1,14 +1,14 @@
 # ZQM-Labs/.github
 
 <!-- ZQM-START -->
+<!-- markdownlint-disable MD033 -->
 <p align="center">
   <strong>ZQM Labs — Z's Quests & Mischief</strong><br>
   <a href="https://zqmlabs.com">zqmlabs.com</a> •
   <a href="https://github.com/ZQM-Labs">GitHub</a>
 </p>
+<!-- markdownlint-enable MD033 -->
 <!-- ZQM-END -->
-
-
 
 Organization profile and community health files for the ZQM-Labs org.
 
@@ -17,8 +17,8 @@ Organization profile and community health files for the ZQM-Labs org.
 
 Brand and project work live in the org's repositories; this repo is the front door.
 
-
 <!-- ZQM-FOOTER-START -->
+<!-- markdownlint-disable MD033 -->
 ---
 
 <p align="center">
@@ -27,6 +27,7 @@ Brand and project work live in the org's repositories; this repo is the front do
   <a href="https://github.com/ZQM-Labs">ZQM Labs</a> •
   <a href="https://github.com/ZQM-Computing">ZQM Computing</a>
 </p>
+<!-- markdownlint-enable MD033 -->
 <!-- ZQM-FOOTER-END -->
 
 ## Installation
