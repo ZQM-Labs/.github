@@ -26,7 +26,7 @@ Every game ships with the **scare Dial** — four intensity levels, from *Li'l Z
 - **Authoring** — [quest-authoring](https://github.com/ZQM-Labs/quest-authoring): quest-pack JSON spec, authoring guide, validator
 - **Organizer toolkit** — [organizer-toolkit](https://github.com/ZQM-Labs/organizer-toolkit): setup checklists, print specs, day-of troubleshooting
 - **Playtests** — [playtests](https://github.com/ZQM-Labs/playtests): protocol + results from real runs
-- **Tracking** — [wisps-tracker](https://github.com/ZQM-Labs/wisps-tracker): team tracking backend
+- **Analytics** — [quest-analytics](https://github.com/ZQM-Labs/quest-analytics): team analytics + tracking backend
 - **Site** — [zqmlabs-site](https://github.com/ZQM-Labs/zqmlabs-site): zqmlabs.com source
 
 ## Organizations
