@@ -3,27 +3,36 @@
 <!-- ZQM-START -->
 <p align="center">
   <strong>ZQM Labs — Z's Quests & Mischief</strong><br>
-  <a href="https://zqmlabs.com">zqmlabs.com</a> •
-  <a href="https://github.com/ZQM-Labs">GitHub</a>
+  <a href="https://zqmlabs.com">zqmlabs.com</a>
 </p>
 <!-- ZQM-END -->
 
-**ZQM Labs** is a games studio building location-based scavenger hunt games and player-facing tools. We build quest authoring systems, playtest frameworks, and the infrastructure that powers Z's Quests & Mischief.
+**ZQM Labs is a game lab.** We build location-based quest games — real places, real teams, real mischief.
+
+## The Story
+
+Dr. Z, a Frankenstein-flavored mad-scientist Game Master, builds impossible games and lets them loose on the world. His first creation, **Wisp**, escaped the lab — and now players chase Wisps through parks, downtowns, and neighborhoods, solving puzzles at every stop.
+
+Every game ships with the **scare Dial** — four intensity levels, from *Li'l Z Cozy* all the way to *Full Madness Overdrive* — so organizers tune the vibe to their crowd.
+
+🎃 **Live now:** *Wisp's Lost Lanterns*, our Halloween 2026 pilot — six stops, QR checkpoints, GPS arrival, and a shared hint budget. [Get a kit](https://zqmlabs.com/halloween/).
 
 ## What We Build
 
-- **Games & Player Tools** — quest packs, lantern player, wisps tracker, playtests
-- **Authoring & Content** — quest authoring toolkit, organizer toolkit, templates
-- **Security & Compliance** — attestation, supply chain security, bug bounty
-- **AI & Automation** — multi-agent orchestration, workflow automation, telemetry
-- **Research & Intel** — mesh indexing, local tools, intelligence gathering
+- **Games** — [lantern-player](https://github.com/ZQM-Labs/lantern-player): the offline-first player app (vanilla JS, Leaflet, PWA)
+- **Quest packs** — [quest-packs](https://github.com/ZQM-Labs/quest-packs): the edition catalog, incl. a free 6-stop sample quest
+- **Authoring** — [quest-authoring](https://github.com/ZQM-Labs/quest-authoring): quest-pack JSON spec, authoring guide, validator
+- **Organizer toolkit** — [organizer-toolkit](https://github.com/ZQM-Labs/organizer-toolkit): setup checklists, print specs, day-of troubleshooting
+- **Playtests** — [playtests](https://github.com/ZQM-Labs/playtests): protocol + results from real runs
+- **Tracking** — [wisps-tracker](https://github.com/ZQM-Labs/wisps-tracker): team tracking backend
+- **Site** — [zqmlabs-site](https://github.com/ZQM-Labs/zqmlabs-site): zqmlabs.com source
 
 ## Organizations
 
 | Org | Focus |
 |-----|-------|
-| [ZQM-Labs](https://github.com/ZQM-Labs) | Games, player-facing tools, authoring |
-| [ZQM-Computing](https://github.com/ZQM-Computing) | Geospatial engineering, AI infrastructure |
+| [ZQM-Labs](https://github.com/ZQM-Labs) | The game lab — quests, players, organizers |
+| [ZQM-Computing](https://github.com/ZQM-Computing) | General computing — security, automation, infrastructure |
 
 ## Community
 
@@ -33,4 +42,4 @@
 
 ---
 
-*ZQM Labs — Z's Quests & Mischief. Built with ❤️ by the ZQM team.*
+*Games, gear & a little mischief. Play more. Plan less.*
