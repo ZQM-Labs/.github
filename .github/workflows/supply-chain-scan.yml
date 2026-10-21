@@ -1,0 +1,103 @@
+name: Supply Chain Security Scan
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  schedule:
+    - cron: "0 0 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    name: Scan dependencies and licenses
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    outputs:
+      report_available: ${{ steps.locate.outputs.available }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pip-audit
+        run: python -m pip install --disable-pip-version-check pip-audit
+
+      - name: Test vendored scanner parsing
+        env:
+          PYTHONPATH: .github/scripts
+        run: python -m unittest discover -s .github/scripts/tests -v
+
+      - name: Run supply-chain scanner
+        id: scan
+        shell: bash
+        run: |
+          python .github/scripts/zqm_supply_chain_scanner.py \
+            --repo "${{ github.repository }}" \
+            --output both \
+            --no-comment
+
+      - name: Locate SARIF report
+        id: locate
+        if: always()
+        shell: bash
+        run: |
+          report="$(find .zqm-security-reports -type f -name '*-results.sarif' -print -quit 2>/dev/null || true)"
+          if [[ -n "$report" ]]; then
+            echo "path=$report" >> "$GITHUB_OUTPUT"
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Scanner did not produce a SARIF report; inspect the scanner step output."
+          fi
+
+      - name: Upload scan report artifact
+        if: always() && steps.locate.outputs.available == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: supply-chain-scan-${{ github.run_id }}
+          path: .zqm-security-reports/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+
+  upload-sarif:
+    name: Publish SARIF to code security
+    if: always() && github.event_name != 'pull_request' && needs.scan.outputs.report_available == 'true'
+    needs: scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Download scan report artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: supply-chain-scan-${{ github.run_id }}
+          path: reports
+
+      - name: Locate downloaded SARIF report
+        id: locate
+        shell: bash
+        run: |
+          report="$(find reports -type f -name '*-results.sarif' -print -quit)"
+          if [[ -z "$report" ]]; then
+            echo "::error::Expected SARIF report was not present in the downloaded artifact."
+            exit 1
+          fi
+          echo "path=$report" >> "$GITHUB_OUTPUT"
+
+      - name: Upload SARIF
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: ${{ steps.locate.outputs.path }}
