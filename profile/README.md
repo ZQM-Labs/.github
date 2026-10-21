@@ -34,7 +34,7 @@ Every game ships with the **scare Dial** — four intensity levels, from *Li'l Z
 | Org | Focus |
 |-----|-------|
 | [ZQM-Labs](https://github.com/ZQM-Labs) | The game lab — quests, players, organizers |
-| [ZQM-Computing](https://github.com/ZQM-Computing) | General computing — security, automation, infrastructure |
+| [ZQM-Computing](https://github.com/ZQM-Computing) | Geospatial engineering — spatial data patterns, infrastructure, and the tech under the games |
 
 ## Community
 
