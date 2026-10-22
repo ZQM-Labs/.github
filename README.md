@@ -61,7 +61,7 @@ MIT — see [LICENSE](LICENSE).
 
 ## Validation
 
-This repository uses GitHub Actions for continuous integration. See [CI workflow](.github/workflows/ci.yml) for details.
+This repository uses GitHub Actions for continuous integration. See the [Actions tab](https://github.com/ZQM-Labs/.github/actions) for workflow runs.
 
 To validate locally:
 
