@@ -18,7 +18,7 @@ concurrency:
 jobs:
   scan:
     name: Scan dependencies and licenses
-    runs-on: [self-hosted, Linux, X64]
+    runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
       contents: read
@@ -79,7 +79,7 @@ jobs:
     name: Publish SARIF to code security
     if: always() && github.event_name != 'pull_request' && needs.scan.outputs.report_available == 'true'
     needs: scan
-    runs-on: [self-hosted, Linux, X64]
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
       contents: read
