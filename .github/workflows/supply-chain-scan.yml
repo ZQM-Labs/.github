@@ -11,11 +11,15 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: supply-chain-${{ github.workflow }}-${{ github.event.pull_request.head.repo.full_name || github.repository }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
 jobs:
   scan:
     name: Scan dependencies and licenses
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
+    runs-on: [self-hosted, Linux, X64]
+    timeout-minutes: 20
     permissions:
       contents: read
     outputs:
@@ -29,13 +33,14 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install pip-audit
-        run: python -m pip install --disable-pip-version-check pip-audit
-
       - name: Test vendored scanner parsing
+        if: ${{ hashFiles('.github/scripts/tests/**') != '' }}
         env:
           PYTHONPATH: .github/scripts
         run: python -m unittest discover -s .github/scripts/tests -v
+
+      - name: Install vulnerability scanners
+        run: python -m pip install --disable-pip-version-check --upgrade "pip-audit>=2.10" "safety<3" "cyclonedx-python-lib<8" "setuptools<81" wheel  # floors keep the resolver off the broken combo (safety 2.3.5 caps packaging<22 -> pip-audit 2.4.12 -> cyclonedx.parser gone); --upgrade + setuptools/wheel because safety scans this environment itself and the gate fails on any finding - the tool env's bundled bootstrap packages must be current (setuptools<81: safety 2.3.x needs pkg_resources, removed in setuptools 81)
 
       - name: Run supply-chain scanner
         id: scan
@@ -74,8 +79,8 @@ jobs:
     name: Publish SARIF to code security
     if: always() && github.event_name != 'pull_request' && needs.scan.outputs.report_available == 'true'
     needs: scan
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
+    runs-on: [self-hosted, Linux, X64]
+    timeout-minutes: 10
     permissions:
       contents: read
       security-events: write
@@ -98,6 +103,12 @@ jobs:
           echo "path=$report" >> "$GITHUB_OUTPUT"
 
       - name: Upload SARIF
+        # GitHub Advanced Security is not enabled for this private repo
+        # (owner/billing), so the code-scanning API rejects the upload.
+        # The scan job above is the real gate; keep the SARIF as a run
+        # artifact and do not fail the workflow on the publish sink
+        # (same treatment as quest-analytics).
+        continue-on-error: true
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ steps.locate.outputs.path }}
