@@ -25,8 +25,8 @@ Brand and project work live in the org's repositories; this repo is the front do
 
 **What it contributes:**
 
-- The ZQM-Labs org profile page itself: who the lab is, the Dr. Z / Wisp story, the live Halloween pilot, and the map of the games repositories (player, quest packs, authoring, organizer toolkit, playtests, tracker, site).
-- The public statement of the two-account boundary: ZQM-Labs is the game lab; ZQM-Computing is general computing.
+- The ZQM-Labs org profile page itself: who the lab is, the Dr. Z / Wisp story, the live Halloween pilot, and the map of the games repositories (player, quest packs, authoring, organizer toolkit, playtests, quest-analytics, site).
+- The public statement of the two-account boundary: ZQM-Labs is the game lab; ZQM-Computing is geospatial engineering and infrastructure.
 - Org-wide community defaults for every ZQM-Labs repository that does not supply its own.
 
 **Why it is not a deletion candidate:** Deleting it removes the org's public profile page and its community-health defaults. It is a brand surface, not scaffolding.
