@@ -10,7 +10,7 @@
 <!-- markdownlint-enable MD033 -->
 <!-- ZQM-END -->
 
-Organization profile and community health files for the ZQM-Labs org.
+The **ZQM Labs GitHub organization profile and community-health repository**. It supplies the public organization profile and reusable contribution, conduct, issue, and pull-request guidance for repositories that do not define their own. Product code and game content live in the individual project repositories; this repo is the organization-level front door.
 
 - `profile/README.md` — the public org profile shown on the ZQM-Labs page (ZQM Labs — Z's Quests & Mischief).
 - Community health files here (contributing guidelines, code of conduct, issue and PR templates) apply as org-wide defaults to repositories that don't carry their own.
