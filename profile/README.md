@@ -29,7 +29,7 @@ Our approach favors approachable play, clear instructions, accessible alternativ
 
 ## Cookbooks and practical examples
 
-The ZQM Labs cookbooks collect focused, reproducible patterns for building, testing, authoring, and operating game experiences. They are practical starting points—not a claim that every example has been validated in every target application or production environment.
+The ZQM Labs cookbooks collect focused, reproducible patterns for building, testing, authoring, and operating game experiences. They are practical starting points—not a claim that every example has been validated in every target application or production environment. See the [Cookbook Catalog](COOKBOOKS.md) for the implemented foundations, automated evidence, assurance levels, and outstanding target-runtime validation for each cookbook.
 
 ### Game engines and level design
 
