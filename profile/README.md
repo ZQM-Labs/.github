@@ -1,9 +1,8 @@
 # ZQM Labs — Z’s Quests & Mischief
 
-<p align="center">
-  <strong>Community-centered games built for curiosity, exploration, and a little mischief.</strong><br>
-  <a href="https://zqmlabs.com">zqmlabs.com</a>
-</p>
+**Community-centered games built for curiosity, exploration, and a little mischief.**
+
+[Visit zqmlabs.com](https://zqmlabs.com)
 
 ZQM Labs creates self-guided quest games and the tools that help communities turn places, stories, and shared challenges into playable experiences. Our games are designed for people to play together—in local neighborhoods, at community events, and wherever a quest can bring people together.
 
