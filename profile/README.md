@@ -2,74 +2,82 @@
 
 **Community-centered games built for curiosity, exploration, and a little mischief.**
 
-[Visit zqmlabs.com](https://zqmlabs.com)
+[Visit zqmlabs.com](https://zqmlabs.com) · [Browse repositories](https://github.com/orgs/ZQM-Labs/repositories)
 
-ZQM Labs creates self-guided quest games and the tools that help communities turn places, stories, and shared challenges into playable experiences. Our games are designed for people to play together—in local neighborhoods, at community events, and wherever a quest can bring people together.
+ZQM Labs builds self-guided quest games and the tools that help communities turn places, stories, and shared challenges into playable experiences. The goal is global and community-centered: local neighborhoods and events are examples of where people can play, not the limit of the studio’s audience.
 
 ## Start here
 
 - **[Play the Wisp’s Lost Lanterns demo](https://zqmlabs.com/games/hunt-for-wisps/play/?demo=1)** — try the browser-based scavenger-hunt experience.
-- **[Explore Wisp’s Lost Lanterns](https://zqmlabs.com/games/hunt-for-wisps/)** — learn about the game, its checkpoints, and its play experience.
-- **[Visit ZQM Labs](https://zqmlabs.com)** — see the broader studio and its projects.
+- **[Explore Wisp’s Lost Lanterns](https://zqmlabs.com/games/hunt-for-wisps/)** — read about the game and its checkpoint experience.
+- **[Explore the game-development repositories](https://github.com/orgs/ZQM-Labs/repositories)** — find player, content, authoring, organizer, testing, and website projects.
 
-Wisp’s Lost Lanterns is our Halloween quest: players follow clues and discover six lantern checkpoints. The demo is available to explore; event dates, availability, and location-specific arrangements are published separately from the demo.
+The Wisp’s Lost Lanterns demo is an exploratory experience. A demo link does not itself confirm event dates, local availability, paid booking, or production readiness.
 
-## What we build
+## How the projects fit together
 
-| Area | Project | Purpose |
+| Stage | Repository | Role |
 | --- | --- | --- |
-| Player experience | [quest-player](https://github.com/ZQM-Labs/quest-player) | Browser-based, offline-conscious quest-player experience |
-| Quest content | [quest-packs](https://github.com/ZQM-Labs/quest-packs) | Structured quest-pack content and sample material |
-| Authoring | [quest-authoring](https://github.com/ZQM-Labs/quest-authoring) | Quest-pack format, authoring guidance, and validation |
-| Organizer operations | [organizer-toolkit](https://github.com/ZQM-Labs/organizer-toolkit) | Setup, print, event-day, and troubleshooting guidance |
-| Playtesting | [playtests](https://github.com/ZQM-Labs/playtests) | Playtest protocols and recorded findings |
-| Website | [zqmlabs-site](https://github.com/ZQM-Labs/zqmlabs-site) | Source for the public website |
+| Player experience | [quest-player](https://github.com/ZQM-Labs/quest-player) | Browser-based quest-player experience and client behavior |
+| Quest content | [quest-packs](https://github.com/ZQM-Labs/quest-packs) | Structured quest-pack content and examples |
+| Authoring and validation | [quest-authoring](https://github.com/ZQM-Labs/quest-authoring) | Content format, authoring guidance, and validation |
+| Organizer operations | [organizer-toolkit](https://github.com/ZQM-Labs/organizer-toolkit) | Setup, print, event-day, and troubleshooting workflows |
+| Playtesting | [playtests](https://github.com/ZQM-Labs/playtests) | Playtest protocols, findings, and evidence |
+| Public website | [zqmlabs-site](https://github.com/ZQM-Labs/zqmlabs-site) | Source for the public studio website |
 
-Our approach favors approachable play, clear instructions, accessible alternatives where practical, and honest documentation of what has—and has not—been tested. GPS and QR checkpoints are game mechanics, not proof of identity or secure authorization.
+Conceptual flow: **author content → validate packs → deliver the player experience → operate the event → playtest and improve**. This is a workflow map, not a claim that every step is currently automated or integrated end to end.
 
 ## Cookbooks and practical examples
 
-The ZQM Labs cookbooks collect focused, reproducible patterns for building, testing, authoring, and operating game experiences. They are practical starting points—not a claim that every example has been validated in every target application or production environment. See the [Cookbook Catalog](COOKBOOKS.md) for the implemented foundations, automated evidence, assurance levels, and outstanding target-runtime validation for each cookbook.
+The cookbooks document focused patterns for game engines, level design, assets, audio, browser testing, backend services, payments, and location-based play. Each has an individual rationale below. The rationale explains why the topic belongs in the collection; it is not evidence that every recipe is complete, tested against every target application, or production-ready.
+
+See the [ZQM Labs Cookbook Catalog](COOKBOOKS.md) for the inventory, scope, evidence expectations, and known validation gaps.
 
 ### Game engines and level design
 
-- [Godot Cookbook](https://github.com/ZQM-Labs/godot-cookbook) — included for native-game scene structure, responsive UI, input handling, and reusable interaction patterns; useful when a quest needs a packaged game-client option.
-- [Phaser Cookbook](https://github.com/ZQM-Labs/phaser-cookbook) — included for browser-first game scenes and interaction patterns, where low-friction links and accessible web delivery matter.
-- [Tiled Cookbook](https://github.com/ZQM-Labs/tiled-cookbook) — included for portable tile-map authoring and checkpoint-marker conventions that keep level geometry and game logic coordinated.
-- [LDtk Cookbook](https://github.com/ZQM-Labs/ldtk-cookbook) — included for structured level data, stable checkpoint identity, and validation contracts that can catch content errors before play.
-- [Location Games Cookbook](https://github.com/ZQM-Labs/location-games-cookbook) — included because location-based games add real-world safety, stale-location, accessibility, and checkpoint-verification concerns beyond ordinary game logic.
+- [Godot Cookbook](https://github.com/ZQM-Labs/godot-cookbook) — scene organization, UI, input, and reusable native-game interaction patterns.
+- [Phaser Cookbook](https://github.com/ZQM-Labs/phaser-cookbook) — browser-first scenes and interactions suited to low-friction web delivery.
+- [Tiled Cookbook](https://github.com/ZQM-Labs/tiled-cookbook) — portable tile-map authoring and map metadata conventions that help keep geometry and gameplay coordinated.
+- [LDtk Cookbook](https://github.com/ZQM-Labs/ldtk-cookbook) — structured level data, stable entity/checkpoint identity, and validation of authored content.
+- [Location Games Cookbook](https://github.com/ZQM-Labs/location-games-cookbook) — location-aware game design, real-world safety, stale-location handling, accessibility alternatives, and checkpoint verification limits.
 
 ### Art, assets, and audio
 
-- [Blender Cookbook](https://github.com/ZQM-Labs/blender-cookbook) — included for repeatable 3D asset creation and export settings, helping keep game assets consistent and reusable.
-- [Krita Cookbook](https://github.com/ZQM-Labs/krita-cookbook) — included for 2D artwork, palette discipline, and export-ready asset workflows that support a coherent visual identity.
-- [Audacity Cookbook](https://github.com/ZQM-Labs/audacity-cookbook) — included for reproducible sound-effect production, editing, and export practices so audio can be regenerated and tested consistently.
+- [Blender Cookbook](https://github.com/ZQM-Labs/blender-cookbook) — repeatable 3D asset creation and export practices for reusable game assets.
+- [Krita Cookbook](https://github.com/ZQM-Labs/krita-cookbook) — 2D illustration, palette discipline, and export workflows for consistent visual assets.
+- [Audacity Cookbook](https://github.com/ZQM-Labs/audacity-cookbook) — reproducible sound-effect editing and export workflows.
 
 ### Testing, backend, and payments
 
-- [Playwright Cookbook](https://github.com/ZQM-Labs/playwright-cookbook) — included to document end-to-end browser checks for quest navigation, client-side state, and regression-prone player flows.
-- [PocketBase Cookbook](https://github.com/ZQM-Labs/pocketbase-cookbook) — included for backend schema, authentication, record ownership, and authorization boundaries; these are essential when game progress or organizer data is stored remotely.
-- [Stripe Cookbook](https://github.com/ZQM-Labs/stripe-cookbook) — included because payment success must be reconciled with webhook delivery and fulfillment; it documents idempotency and failure handling rather than treating checkout completion alone as proof of delivery.
+- [Playwright Cookbook](https://github.com/ZQM-Labs/playwright-cookbook) — browser-level regression checks for navigation, client state, and key player flows.
+- [PocketBase Cookbook](https://github.com/ZQM-Labs/pocketbase-cookbook) — backend schema, authentication, record ownership, and authorization boundaries for remotely stored game or organizer data.
+- [Stripe Cookbook](https://github.com/ZQM-Labs/stripe-cookbook) — checkout integration, webhook idempotency, failure handling, and reconciliation between payment and fulfillment.
 
-Examples and automated checks have different levels of assurance: a passing structural or unit test does not by itself prove real-editor compatibility, browser compatibility, perceptual quality, secure physical presence, or production readiness. Consult each cookbook's README for its current scope, prerequisites, and validation status.
+### Validation principles
 
-## Two complementary efforts
+- A passing unit or structural test is not proof of target-editor compatibility or production readiness.
+- Offline behavior requires tests for installation, reload, update, and recovery—not just a service-worker file.
+- Accessibility and physical checkpoint safety require their own review and field evidence.
+- Payment completion must be distinguished from successful, idempotent fulfillment.
+- GPS and QR checkpoints are game mechanics, not proof of identity or secure authorization.
+
+## Two complementary organizations
 
 | Organization | Focus |
 | --- | --- |
 | [ZQM Labs](https://github.com/ZQM-Labs) | Games, quest experiences, content, and community play |
 | [ZQM Computing](https://github.com/ZQM-Computing) | Geospatial engineering, open-source spatial patterns, data infrastructure, and supporting technology |
 
-The organizations are related, but have distinct purposes. ZQM Computing contributes geospatial engineering where it supports game experiences; ZQM Labs remains focused on the games and the people who play them.
+The organizations are related but distinct. ZQM Computing contributes geospatial methods where they support games; ZQM Labs remains focused on the game experiences and the people who play them.
 
-## Get involved
+## Contribute
 
-- Browse the [ZQM Labs repositories](https://github.com/orgs/ZQM-Labs/repositories).
-- Read the [contribution guidelines](https://github.com/ZQM-Labs/.github/blob/main/CONTRIBUTING.md) before opening a pull request.
-- Review the [security policy](https://github.com/ZQM-Labs/.github/blob/main/SECURITY.md) to report vulnerabilities responsibly.
-- Follow the [Code of Conduct](https://github.com/ZQM-Labs/.github/blob/main/CODE_OF_CONDUCT.md) when participating.
+- Read the [contribution guidelines](https://github.com/ZQM-Labs/.github/blob/main/CONTRIBUTING.md).
+- Review the [security policy](https://github.com/ZQM-Labs/.github/blob/main/SECURITY.md) before reporting vulnerabilities.
+- Follow the [Code of Conduct](https://github.com/ZQM-Labs/.github/blob/main/CODE_OF_CONDUCT.md).
+- When reporting defects, include reproduction steps, environment details, expected behavior, and observed behavior. Label assumptions separately from verified findings.
 
-We welcome useful bug reports, reproducible examples, documentation improvements, accessibility feedback, and thoughtful contributions. Please distinguish verified behavior from assumptions, and include reproduction steps when reporting a defect.
+Check each repository’s README, license, and current CI before relying on its instructions or claims.
 
 ---
 
