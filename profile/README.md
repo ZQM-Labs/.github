@@ -33,23 +33,23 @@ The ZQM Labs cookbooks collect focused, reproducible patterns for building, test
 
 ### Game engines and level design
 
-- [Godot Cookbook](https://github.com/ZQM-Labs/godot-cookbook) — responsive game UI, input, and scene patterns.
-- [Phaser Cookbook](https://github.com/ZQM-Labs/phaser-cookbook) — browser-game scenes, interaction, and accessibility-oriented patterns.
-- [Tiled Cookbook](https://github.com/ZQM-Labs/tiled-cookbook) — tile-map structure and checkpoint markers.
-- [LDtk Cookbook](https://github.com/ZQM-Labs/ldtk-cookbook) — level contracts, checkpoint identity, and structural validation.
-- [Location Games Cookbook](https://github.com/ZQM-Labs/location-games-cookbook) — location-aware quest mechanics and checkpoint freshness.
+- [Godot Cookbook](https://github.com/ZQM-Labs/godot-cookbook) — included for native-game scene structure, responsive UI, input handling, and reusable interaction patterns; useful when a quest needs a packaged game-client option.
+- [Phaser Cookbook](https://github.com/ZQM-Labs/phaser-cookbook) — included for browser-first game scenes and interaction patterns, where low-friction links and accessible web delivery matter.
+- [Tiled Cookbook](https://github.com/ZQM-Labs/tiled-cookbook) — included for portable tile-map authoring and checkpoint-marker conventions that keep level geometry and game logic coordinated.
+- [LDtk Cookbook](https://github.com/ZQM-Labs/ldtk-cookbook) — included for structured level data, stable checkpoint identity, and validation contracts that can catch content errors before play.
+- [Location Games Cookbook](https://github.com/ZQM-Labs/location-games-cookbook) — included because location-based games add real-world safety, stale-location, accessibility, and checkpoint-verification concerns beyond ordinary game logic.
 
 ### Art, assets, and audio
 
-- [Blender Cookbook](https://github.com/ZQM-Labs/blender-cookbook) — procedural 3D assets and export workflows.
-- [Krita Cookbook](https://github.com/ZQM-Labs/krita-cookbook) — 2D art assets, palettes, and export-ready starters.
-- [Audacity Cookbook](https://github.com/ZQM-Labs/audacity-cookbook) — deterministic sound-effect generation and audio workflow examples.
+- [Blender Cookbook](https://github.com/ZQM-Labs/blender-cookbook) — included for repeatable 3D asset creation and export settings, helping keep game assets consistent and reusable.
+- [Krita Cookbook](https://github.com/ZQM-Labs/krita-cookbook) — included for 2D artwork, palette discipline, and export-ready asset workflows that support a coherent visual identity.
+- [Audacity Cookbook](https://github.com/ZQM-Labs/audacity-cookbook) — included for reproducible sound-effect production, editing, and export practices so audio can be regenerated and tested consistently.
 
 ### Testing, backend, and payments
 
-- [Playwright Cookbook](https://github.com/ZQM-Labs/playwright-cookbook) — browser-level tests for player experiences and client-side state.
-- [PocketBase Cookbook](https://github.com/ZQM-Labs/pocketbase-cookbook) — authentication, record ownership, and backend authorization examples.
-- [Stripe Cookbook](https://github.com/ZQM-Labs/stripe-cookbook) — checkout, webhook reliability, and purchase-fulfillment testing patterns.
+- [Playwright Cookbook](https://github.com/ZQM-Labs/playwright-cookbook) — included to document end-to-end browser checks for quest navigation, client-side state, and regression-prone player flows.
+- [PocketBase Cookbook](https://github.com/ZQM-Labs/pocketbase-cookbook) — included for backend schema, authentication, record ownership, and authorization boundaries; these are essential when game progress or organizer data is stored remotely.
+- [Stripe Cookbook](https://github.com/ZQM-Labs/stripe-cookbook) — included because payment success must be reconciled with webhook delivery and fulfillment; it documents idempotency and failure handling rather than treating checkout completion alone as proof of delivery.
 
 Examples and automated checks have different levels of assurance: a passing structural or unit test does not by itself prove real-editor compatibility, browser compatibility, perceptual quality, secure physical presence, or production readiness. Consult each cookbook's README for its current scope, prerequisites, and validation status.
 
