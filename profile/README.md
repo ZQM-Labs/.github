@@ -1,45 +1,50 @@
-# ZQM Labs — Z's Quests & Mischief
+# ZQM Labs — Z’s Quests & Mischief
 
-<!-- ZQM-START -->
-<!-- markdownlint-disable MD033 -->
 <p align="center">
-  <strong>ZQM Labs — Z's Quests & Mischief</strong><br>
+  <strong>Community-centered games built for curiosity, exploration, and a little mischief.</strong><br>
   <a href="https://zqmlabs.com">zqmlabs.com</a>
 </p>
-<!-- markdownlint-enable MD033 -->
-<!-- ZQM-END -->
 
-**ZQM Labs is a game lab.** We build location-based quest games — real places, real teams, real mischief.
+ZQM Labs creates self-guided quest games and the tools that help communities turn places, stories, and shared challenges into playable experiences. Our games are designed for people to play together—in local neighborhoods, at community events, and wherever a quest can bring people together.
 
-## The Story
+## Start here
 
-Dr. Z, a Frankenstein-flavored mad-scientist Game Master, builds impossible games and lets them loose on the world. His first creation, **Wisp**, escaped the lab — and now players chase Wisps through parks, downtowns, and neighborhoods, solving puzzles at every stop.
+- **[Play the Wisp’s Lost Lanterns demo](https://zqmlabs.com/games/hunt-for-wisps/play/?demo=1)** — try the browser-based scavenger-hunt experience.
+- **[Explore Wisp’s Lost Lanterns](https://zqmlabs.com/games/hunt-for-wisps/)** — learn about the game, its checkpoints, and its play experience.
+- **[Visit ZQM Labs](https://zqmlabs.com)** — see the broader studio and its projects.
 
-Every game ships with the **scare Dial** — four intensity levels, from *Li'l Z Cozy* all the way to *Full Madness Overdrive* — so organizers tune the vibe to their crowd.
+Wisp’s Lost Lanterns is our Halloween quest: players follow clues and discover six lantern checkpoints. The demo is available to explore; event dates, availability, and location-specific arrangements are published separately from the demo.
 
-🎃 **Live now:** *Wisp's Lost Lanterns*, our Halloween 2026 pilot — six stops, QR checkpoints, GPS arrival, and a shared hint budget. [Get a kit](https://zqmlabs.com/halloween/).
+## What we build
 
-## What We Build
+| Area | Project | Purpose |
+| --- | --- | --- |
+| Player experience | [quest-player](https://github.com/ZQM-Labs/quest-player) | Browser-based, offline-conscious quest-player experience |
+| Quest content | [quest-packs](https://github.com/ZQM-Labs/quest-packs) | Structured quest-pack content and sample material |
+| Authoring | [quest-authoring](https://github.com/ZQM-Labs/quest-authoring) | Quest-pack format, authoring guidance, and validation |
+| Organizer operations | [organizer-toolkit](https://github.com/ZQM-Labs/organizer-toolkit) | Setup, print, event-day, and troubleshooting guidance |
+| Playtesting | [playtests](https://github.com/ZQM-Labs/playtests) | Playtest protocols and recorded findings |
+| Website | [zqmlabs-site](https://github.com/ZQM-Labs/zqmlabs-site) | Source for the public website |
 
-- **Games** — [quest-player](https://github.com/ZQM-Labs/quest-player): the offline-first player app (vanilla JS, Leaflet, PWA)
-- **Quest packs** — [quest-packs](https://github.com/ZQM-Labs/quest-packs): the edition catalog, incl. a free 6-stop sample quest
-- **Authoring** — [quest-authoring](https://github.com/ZQM-Labs/quest-authoring): quest-pack JSON spec, authoring guide, validator
-- **Organizer toolkit** — [organizer-toolkit](https://github.com/ZQM-Labs/organizer-toolkit): setup checklists, print specs, day-of troubleshooting
-- **Playtests** — [playtests](https://github.com/ZQM-Labs/playtests): protocol + results from real runs
-- **Site** — [zqmlabs-site](https://github.com/ZQM-Labs/zqmlabs-site): zqmlabs.com source
+Our approach favors approachable play, clear instructions, accessible alternatives where practical, and honest documentation of what has—and has not—been tested. GPS and QR checkpoints are game mechanics, not proof of identity or secure authorization.
 
-## Organizations
+## Two complementary efforts
 
-| Org | Focus |
-|-----|-------|
-| [ZQM-Labs](https://github.com/ZQM-Labs) | The game lab — quests, players, organizers |
-| [ZQM-Computing](https://github.com/ZQM-Computing) | Geospatial engineering — spatial data patterns, infrastructure, and the tech under the games |
+| Organization | Focus |
+| --- | --- |
+| [ZQM Labs](https://github.com/ZQM-Labs) | Games, quest experiences, content, and community play |
+| [ZQM Computing](https://github.com/ZQM-Computing) | Geospatial engineering, open-source spatial patterns, data infrastructure, and supporting technology |
 
-## Community
+The organizations are related, but have distinct purposes. ZQM Computing contributes geospatial engineering where it supports game experiences; ZQM Labs remains focused on the games and the people who play them.
 
-- [Contributing Guidelines](https://github.com/ZQM-Labs/zqm-template/blob/main/CONTRIBUTING.md)
-- [Security Policy](https://github.com/ZQM-Labs/zqm-template/blob/main/SECURITY.md)
-- [Code of Conduct](https://github.com/ZQM-Labs/zqm-template/blob/main/CODE_OF_CONDUCT.md)
+## Get involved
+
+- Browse the [ZQM Labs repositories](https://github.com/orgs/ZQM-Labs/repositories).
+- Read the [contribution guidelines](https://github.com/ZQM-Labs/.github/blob/main/CONTRIBUTING.md) before opening a pull request.
+- Review the [security policy](https://github.com/ZQM-Labs/.github/blob/main/SECURITY.md) to report vulnerabilities responsibly.
+- Follow the [Code of Conduct](https://github.com/ZQM-Labs/.github/blob/main/CODE_OF_CONDUCT.md) when participating.
+
+We welcome useful bug reports, reproducible examples, documentation improvements, accessibility feedback, and thoughtful contributions. Please distinguish verified behavior from assumptions, and include reproduction steps when reporting a defect.
 
 ---
 
