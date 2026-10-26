@@ -5,50 +5,61 @@ This catalog explains why each cookbook topic belongs in the ZQM Labs portfolio.
 ## Game engines and level design
 
 ### [godot-cookbook](https://github.com/ZQM-Labs/godot-cookbook)
+
 **Purpose:** Godot scene structure, UI, input, and reusable game interactions.  
 **Why included:** Covers native-game patterns for projects that need a packaged client or structured scene system. Verify examples in the target Godot version.
 
 ### [phaser-cookbook](https://github.com/ZQM-Labs/phaser-cookbook)
+
 **Purpose:** Browser-first game scenes and interactions.  
 **Why included:** Supports low-friction web delivery and JavaScript/TypeScript game experiences. Browser behavior still requires runtime testing.
 
 ### [tiled-cookbook](https://github.com/ZQM-Labs/tiled-cookbook)
+
 **Purpose:** Tile-map authoring and map metadata.  
 **Why included:** Helps separate level geometry from gameplay logic and standardize checkpoint or object markers. Validate exported maps against the consuming runtime.
 
 ### [ldtk-cookbook](https://github.com/ZQM-Labs/ldtk-cookbook)
+
 **Purpose:** Structured level data and entity metadata.  
 **Why included:** Supports stable object identity and validation of authored level content before it reaches a player.
 
 ### [location-games-cookbook](https://github.com/ZQM-Labs/location-games-cookbook)
+
 **Purpose:** Location-aware game design and field operations.  
 **Why included:** Location games require explicit treatment of physical safety, stale or inaccurate GPS, privacy, accessibility alternatives, and checkpoint verification limits.
 
 ## Art, assets, and audio
 
 ### [blender-cookbook](https://github.com/ZQM-Labs/blender-cookbook)
+
 **Purpose:** Repeatable 3D asset creation and export.  
 **Why included:** Establishes reusable asset-production patterns and reduces avoidable differences between source files and game-ready exports.
 
 ### [krita-cookbook](https://github.com/ZQM-Labs/krita-cookbook)
+
 **Purpose:** 2D illustration, palette, and export workflows.  
 **Why included:** Supports consistent visual assets and repeatable export settings across game content.
 
 ### [audacity-cookbook](https://github.com/ZQM-Labs/audacity-cookbook)
+
 **Purpose:** Sound-effect editing and audio export.  
 **Why included:** Documents repeatable audio editing so effects can be regenerated and delivered with consistent formats and levels.
 
 ## Testing, backend, and payments
 
 ### [playwright-cookbook](https://github.com/ZQM-Labs/playwright-cookbook)
+
 **Purpose:** Browser automation and end-to-end regression checks.  
 **Why included:** Helps validate navigation, client state, and important player flows. Passing browser tests does not guarantee coverage of every device or browser.
 
 ### [pocketbase-cookbook](https://github.com/ZQM-Labs/pocketbase-cookbook)
+
 **Purpose:** Backend schema, authentication, record ownership, and authorization.  
 **Why included:** Persistent game and organizer data needs explicit access boundaries and tests for unauthorized reads and writes.
 
 ### [stripe-cookbook](https://github.com/ZQM-Labs/stripe-cookbook)
+
 **Purpose:** Checkout, webhook processing, and fulfillment workflows.  
 **Why included:** Payment processing must handle retries, duplicate events, failures, and reconciliation. A successful checkout page alone is not proof that fulfillment completed.
 
