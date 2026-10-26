@@ -27,6 +27,32 @@ Wisp’s Lost Lanterns is our Halloween quest: players follow clues and discover
 
 Our approach favors approachable play, clear instructions, accessible alternatives where practical, and honest documentation of what has—and has not—been tested. GPS and QR checkpoints are game mechanics, not proof of identity or secure authorization.
 
+## Cookbooks and practical examples
+
+The ZQM Labs cookbooks collect focused, reproducible patterns for building, testing, authoring, and operating game experiences. They are practical starting points—not a claim that every example has been validated in every target application or production environment.
+
+### Game engines and level design
+
+- [Godot Cookbook](https://github.com/ZQM-Labs/godot-cookbook) — responsive game UI, input, and scene patterns.
+- [Phaser Cookbook](https://github.com/ZQM-Labs/phaser-cookbook) — browser-game scenes, interaction, and accessibility-oriented patterns.
+- [Tiled Cookbook](https://github.com/ZQM-Labs/tiled-cookbook) — tile-map structure and checkpoint markers.
+- [LDtk Cookbook](https://github.com/ZQM-Labs/ldtk-cookbook) — level contracts, checkpoint identity, and structural validation.
+- [Location Games Cookbook](https://github.com/ZQM-Labs/location-games-cookbook) — location-aware quest mechanics and checkpoint freshness.
+
+### Art, assets, and audio
+
+- [Blender Cookbook](https://github.com/ZQM-Labs/blender-cookbook) — procedural 3D assets and export workflows.
+- [Krita Cookbook](https://github.com/ZQM-Labs/krita-cookbook) — 2D art assets, palettes, and export-ready starters.
+- [Audacity Cookbook](https://github.com/ZQM-Labs/audacity-cookbook) — deterministic sound-effect generation and audio workflow examples.
+
+### Testing, backend, and payments
+
+- [Playwright Cookbook](https://github.com/ZQM-Labs/playwright-cookbook) — browser-level tests for player experiences and client-side state.
+- [PocketBase Cookbook](https://github.com/ZQM-Labs/pocketbase-cookbook) — authentication, record ownership, and backend authorization examples.
+- [Stripe Cookbook](https://github.com/ZQM-Labs/stripe-cookbook) — checkout, webhook reliability, and purchase-fulfillment testing patterns.
+
+Examples and automated checks have different levels of assurance: a passing structural or unit test does not by itself prove real-editor compatibility, browser compatibility, perceptual quality, secure physical presence, or production readiness. Consult each cookbook's README for its current scope, prerequisites, and validation status.
+
 ## Two complementary efforts
 
 | Organization | Focus |
