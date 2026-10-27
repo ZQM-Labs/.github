@@ -1,5 +1,7 @@
 # ZQM Labs Cookbook Catalog
 
+> This is the compact rationale index for repository-level browsing. The [profile catalog](profile/COOKBOOKS.md) is the fuller assurance reference used by the public organization profile; it tracks implemented foundations, automated evidence, and validation still needed. Keep both aligned when inventory or evidence changes.
+
 This catalog explains why each cookbook topic belongs in the ZQM Labs portfolio. Inclusion rationale is not a claim that every example is complete, validated against every target application, or production-ready. Consult each repository's README, license, dependencies, current CI, and target-runtime evidence before relying on it.
 
 ## Game engines and level design
