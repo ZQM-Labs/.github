@@ -24,8 +24,8 @@ Report vulnerabilities to <zqmcomputing@gmail.com>.
 
 | Version | Supported |
 |---------|-----------|
-| latest  | Yes        |
-| < latest| No         |
+| latest  | Yes       |
+| < latest| No        |
 
 ---
 
