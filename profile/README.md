@@ -1,10 +1,21 @@
 # ZQM Labs — Z’s Quests & Mischief
 
-**Community-centered games built for curiosity, exploration, and a little mischief.**
+**Browser-first quests and community games for exploring real places and shared stories.**
 
-[Visit zqmlabs.com](https://zqmlabs.com) · [Browse repositories](https://github.com/orgs/ZQM-Labs/repositories)
+[Try the Wisp’s Lost Lanterns demo](https://zqmlabs.com/games/hunt-for-wisps/play/?demo=1) · [Visit the studio](https://zqmlabs.com) · [Browse game repositories](https://github.com/orgs/ZQM-Labs/repositories)
 
-ZQM Labs builds self-guided quest games and the tools that help communities turn places, stories, and shared challenges into playable experiences. The goal is global and community-centered: local neighborhoods and events are examples of where people can play, not the limit of the studio’s audience.
+ZQM Labs develops accessible, community-centered games and the authoring, testing and host tooling behind them. The audience is global; any local pilot or event example is not a limit on where future games may be offered. The studio builds games and player experiences, while **ZQM Computing** separately develops GIS services and infrastructure.
+
+## What is playable, planned and operational?
+
+| Area | Where to start | What the link establishes |
+| --- | --- | --- |
+| **Wisp’s Lost Lanterns** | [Browser demo](https://zqmlabs.com/games/hunt-for-wisps/play/?demo=1) · [game information](https://zqmlabs.com/games/hunt-for-wisps/) | An exploratory, self-guided demo route; not proof of event availability, a booking or full production fulfillment |
+| **Player and content** | [Quest Player](https://github.com/ZQM-Labs/quest-player) · [Quest Packs](https://github.com/ZQM-Labs/quest-packs) | Source, authored content and tests; check individual release evidence before treating integrations as deployed |
+| **Hosts and operations** | [Organizer Toolkit](https://github.com/ZQM-Labs/organizer-toolkit) · Mischief Portal (restricted-access repository) | Host-facing workflows and a portal scoped to **hosted games only**; neither link grants hosting, checkout or customer-delivery authorization |
+| **Quality and accessibility** | [Playtests](https://github.com/ZQM-Labs/playtests) · [Playwright Cookbook](https://github.com/ZQM-Labs/playwright-cookbook) | Test practices and evidence, not proof that all supported devices, locations or accessibility needs are field-validated |
+
+**For players:** start with the browser demo. **For contributors:** choose a game repository and verify its current README, CI and issue tracker. **For prospective hosts:** review the organizer tooling, then confirm scope and actual availability before representing an event as scheduled.
 
 ## Start here
 
@@ -12,7 +23,7 @@ ZQM Labs builds self-guided quest games and the tools that help communities turn
 - **[Explore Wisp’s Lost Lanterns](https://zqmlabs.com/games/hunt-for-wisps/)** — read about the game and its checkpoint experience.
 - **[Explore the game-development repositories](https://github.com/orgs/ZQM-Labs/repositories)** — find player, content, authoring, organizer, testing, and website projects.
 
-The Wisp’s Lost Lanterns demo is an exploratory experience. A demo link does not itself confirm event dates, local availability, paid booking, or production readiness.
+Wisp’s Lost Lanterns uses a one-phone-per-team browser quest concept with six lanterns and configurable scare levels. The demo is exploratory: the linked route does not confirm paid booking, event dates, supported language coverage, current local availability or full production readiness.
 
 ## How the projects fit together
 
@@ -60,6 +71,14 @@ See the [ZQM Labs Cookbook Catalog](COOKBOOKS.md) for the inventory, scope, evid
 - Accessibility and physical checkpoint safety require their own review and field evidence.
 - Payment completion must be distinguished from successful, idempotent fulfillment.
 - GPS and QR checkpoints are game mechanics, not proof of identity or secure authorization.
+
+## Release and player-safety commitments
+
+- No claim of a paid event, booking, entitlement or successful delivery without a verified checkout-to-fulfillment trace.
+- No assumption that GPS/QR verification establishes personal identity, security clearance or safe access to a real-world location.
+- Test mobile navigation, offline recovery, age-appropriate content, physical checkpoint safety, language support and accessibility on their own evidence.
+- Keep hosted-game administration separate from unrelated archived location pilots; public navigation should advertise only genuinely playable or clearly labeled in-development experiences.
+- Treat passing GitHub checks as source-level evidence for a specific commit, not as confirmation that a live website or service was deployed.
 
 ## Two complementary organizations
 
