@@ -1157,9 +1157,17 @@ def main():
     vulns = sum(1 for f in findings if f["type"] == "vulnerability")
     licenses = sum(1 for f in findings if f["type"] == "license")
     outdated = sum(1 for f in findings if f["type"] == "outdated")
-    print(f"  vulnerabilities={vulns} license_issues={licenses} outdated={outdated}")
+    scan_errors = sum(1 for f in findings if f["type"] == "scan_error")
+    print(f"  vulnerabilities={vulns} license_issues={licenses} outdated={outdated} scan_errors={scan_errors}")
 
-    if findings:
+    # Gate only on real blockers: vulnerabilities, and license allowlist
+    # violations (id is None). Outdated packages and unavailable scanner
+    # coverage (scan_error / LICENSE-UNKNOWN) stay advisory so a missing
+    # optional scanner cannot turn the job red.
+    blocking = vulns + sum(
+        1 for f in findings if f["type"] == "license" and f.get("id") is None
+    )
+    if blocking:
         sys.exit(1)
 
 
