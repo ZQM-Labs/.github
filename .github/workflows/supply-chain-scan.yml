@@ -22,8 +22,6 @@ jobs:
     timeout-minutes: 20
     permissions:
       contents: read
-    outputs:
-      report_available: ${{ steps.locate.outputs.available }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -65,51 +63,12 @@ jobs:
             echo "::warning::Scanner did not produce a SARIF report; inspect the scanner step output."
           fi
 
-      - name: Upload scan report artifact
-        if: always() && steps.locate.outputs.available == 'true'
-        uses: actions/upload-artifact@v7
-        continue-on-error: true
-        with:
-          name: supply-chain-scan-${{ github.run_id }}
-          path: .zqm-security-reports/
-          include-hidden-files: true
-          if-no-files-found: error
-          retention-days: 30
-
-  upload-sarif:
-    name: Publish SARIF to code security
-    if: always() && github.event_name != 'pull_request' && needs.scan.outputs.report_available == 'true'
-    needs: scan
-    runs-on: [self-hosted, Linux, X64, zqm-linux]
-    timeout-minutes: 10
-    permissions:
-      contents: read
-      security-events: write
-    steps:
-      - name: Download scan report artifact
-        uses: actions/download-artifact@v8
-        with:
-          name: supply-chain-scan-${{ github.run_id }}
-          path: reports
-
-      - name: Locate downloaded SARIF report
-        id: locate
-        shell: bash
-        run: |
-          report="$(find reports -type f -name '*-results.sarif' -print -quit)"
-          if [[ -z "$report" ]]; then
-            echo "::error::Expected SARIF report was not present in the downloaded artifact."
-            exit 1
-          fi
-          echo "path=$report" >> "$GITHUB_OUTPUT"
 
       - name: Upload SARIF
-        # GitHub Advanced Security is not enabled for this private repo
-        # (owner/billing), so the code-scanning API rejects the upload.
-        # The scan job above is the real gate; keep the SARIF as a run
-        # artifact and do not fail the workflow on the publish sink
-        # (same treatment as quest-analytics).
+        # Published from the scan job itself: artifact storage is quota-gated,
+        # so the publish sink must never depend on a downloadable artifact.
+        if: always() && steps.locate.outputs.available == 'true'
         continue-on-error: true
-        uses: github/codeql-action/upload-sarif@v4
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ steps.locate.outputs.path }}
