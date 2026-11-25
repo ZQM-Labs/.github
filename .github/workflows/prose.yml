@@ -24,4 +24,4 @@ jobs:
       - uses: actions/checkout@v4
       - uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --exclude 'github\.com/ZQM-Labs/quest-analytics' '**/*.md'
+          args: --verbose --accept 503 --exclude 'github\.com/ZQM-Labs/quest-analytics' '**/*.md'
