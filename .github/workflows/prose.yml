@@ -7,13 +7,16 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   markdownlint:
     runs-on: [self-hosted, Linux, X64, zqm-linux]
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: DavidAnson/markdownlint-cli2-action@v25
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: DavidAnson/markdownlint-cli2-action@3ce8f712b5d8f31acd8e201be6d97e3d2bb23eb7 # v25
         with:
           globs: '**/*.md'
 
@@ -21,7 +24,7 @@ jobs:
     runs-on: [self-hosted, Linux, X64, zqm-linux]
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: lycheeverse/lychee-action@v2
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
           args: --verbose --accept 200,503 --exclude 'github\.com/ZQM-Labs/quest-analytics' '**/*.md'
