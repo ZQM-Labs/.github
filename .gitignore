@@ -30,3 +30,6 @@ desktop.ini
 
 # Local Python runtime
 Python/
+
+# ZQM supply chain scan artifacts (generated)
+.zqm-security-reports/
